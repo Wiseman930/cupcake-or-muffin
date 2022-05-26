@@ -1,22 +1,36 @@
+
+// this function compares the price of a muffin & a cupcake
+function whatToBuy(cupcake_price, muffin_price){
+
+	if(cupcake_price > muffin_price){
+		return "Buy a muffin"
+	}
+	// Buy a muffin
+
+	else if(cupcake_price < muffin_price){
+		return 'Buy a cupcake'
+	}
+	// But a cupcake
+
+}
+
 const checkbutton = document.querySelector('.button');
 const cupcakeElement = document.querySelector('.cupcake_price');
 const muffinElement = document.querySelector('.muffin_price');
-const message = document.querySelector('.message')
+const messageDisplay = document.querySelector('.message')
 
 
 // this function compares the price of a muffin & a cupcake
-function whatToBuy(){
-	var cupcakeValue = Number(cupcakeElement.value);
-	var muffinValue = Number(muffinElement.value)
+function whatToBuy2(){
+	var cupcake_price = Number(cupcakeElement.value);
+	var muffin_price = Number(muffinElement.value)
 
-	if(muffinValue < cupcakeValue){
-		var giveMuffin = "Buy a muffin";
-		message.innerHTML = giveMuffin;
+	if(muffin_price < cupcake_price){
+		messageDisplay.innerHTML = "Buy a muffin";
 	}
-	if(cupcakeValue < muffinValue ){
-		var giveCupcake = "Buy a cupcake";
-		message.innerHTML = giveCupcake;
+	else if(cupcake_price < muffin_price ){
+		messageDisplay.innerHTML = "Buy a cupcake";
 	}
 	// But a cupcake
 }
-checkbutton.addEventListener('click', whatToBuy)
+checkbutton.addEventListener('click', whatToBuy2)
